@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(Container(
-      color: Colors.blue,
-      child: const Center(
-          child: Text(
-        'Hello, World!',
-        textDirection: TextDirection.ltr,
-      ))));
+  runApp(Center(
+      child: Container(
+          color: Colors.yellow,
+          width: 500,
+          height: 500,
+          child: const Center(
+              child: Text(
+            'mouse',
+            textDirection: TextDirection.ltr,
+          )))));
 }
