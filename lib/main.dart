@@ -21,6 +21,9 @@ class _CounterState extends State<Counter> {
     return GestureDetector(
         onTap: () {
           print('tapped!');
+          setState(() {
+            _count++;
+          });
         },
         child: Container(
             color: Colors.red,
