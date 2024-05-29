@@ -6,10 +6,15 @@ void main() {
   ));
 }
 
-class Counter extends StatelessWidget {
+class Counter extends StatefulWidget {
   const Counter({super.key});
 
-  final _count = 0;
+  @override
+  State<Counter> createState() => _CounterState();
+}
+
+class _CounterState extends State<Counter> {
+  int _count = 0;
 
   @override
   Widget build(BuildContext context) {
