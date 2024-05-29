@@ -1,27 +1,26 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const Column(children: [
-    AnimalView(text: 'mouse', color: Colors.yellow),
-    AnimalView(text: 'lizard', color: Colors.red),
-  ]));
+  runApp(const Center(
+    child: Counter(),
+  ));
 }
 
-class AnimalView extends StatelessWidget {
-  const AnimalView({super.key, required this.text, required this.color});
+class Counter extends StatelessWidget {
+  const Counter({super.key});
 
-  final String text;
-  final Color color;
+  final _count = 0;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: color,
-      width: 100,
-      height: 100,
-      child: Center(
-        child: Text(text, textDirection: TextDirection.ltr),
-      ),
-    );
+        color: Colors.red,
+        width: 100,
+        height: 100,
+        child: Center(
+            child: Text(
+          '$_count',
+          textDirection: TextDirection.ltr,
+        )));
   }
 }
